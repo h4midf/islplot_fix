@@ -73,7 +73,7 @@ def _is_vertex_on_constraint(vertex, constraint):
         summ += v[i] * prod
 
     constant = constraint.get_constant_val().get_num_si()
-    summ += numpy.product([x[1] for x in r]) * constant
+    summ += numpy.prod([x[1] for x in r]) * constant
 
     return int(summ) == 0
 
